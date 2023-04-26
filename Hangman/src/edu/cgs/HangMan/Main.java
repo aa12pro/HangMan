@@ -50,7 +50,7 @@ public class Main extends JFrame {
 		
 		Random random = new Random();
 		
-		word = words[random.nextInt(11)];
+		word = words[random.nextInt(words.length)];
 		
 		label = new JLabel[word.length()];
 		
