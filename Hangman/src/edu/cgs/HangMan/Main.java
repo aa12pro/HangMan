@@ -125,7 +125,7 @@ public class Main extends JFrame {
 		int restart = JOptionPane.showOptionDialog(this, "Select an option:", null, JOptionPane.YES_NO_OPTION,
 				JOptionPane.INFORMATION_MESSAGE, null, Constants.RESTART_OPTIONS, -1);
 		if (restart == 0) {
-			this.dispose();
+			//this.dispose();
 			new Main();
 		} else {
 			System.exit(0);
