@@ -20,6 +20,9 @@ public class Main extends JFrame {
 	private String[] words = {"ΓΛΙΣΤΡΩ", "ΑΜΕΙΒΩ", "ΒΟΡΙΝΟΣ", "ΔΙΑΡΡΟΗ", "ΕΚΠΑΓΛΟΣ", "ΚΛΥΣΜΑ", "ΙΛΙΓΓΟΣ", "ΟΙΟΝΕΙ", "ΧΝΟΤΟ", "ΣΥΜΦΥΗΣ", "ΩΣΟΤΟΥ"};
 	private String word;
 	private JLabel[] label;
+	JComboBox comboBox;
+	JLabel HangMan;
+	private int x = 50, y = 100, height = 200, width = 200;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -43,7 +46,7 @@ public class Main extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JComboBox comboBox = new JComboBox();
+		comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Α", "Β", "Γ", "Δ", "Ε", "Ζ", "Η", "Θ", "Ι", "Κ", "Λ", "Μ", "Ν", "Ξ", "Ο", "Π", "Ρ", "Σ", "Τ", "Υ", "Φ", "Χ", "Ψ", "Ω"}));
 		comboBox.setBounds(316, 52, 89, 22);
 		contentPane.add(comboBox);
@@ -54,15 +57,12 @@ public class Main extends JFrame {
 		
 		label = new JLabel[word.length()];
 		
-		JLabel HangMan = new JLabel();
+		HangMan = new JLabel();
 		HangMan.setIcon(Constants.Default);
 		HangMan.setBounds(12, 0, 271, 169);
 		contentPane.add(HangMan);
 		
-		int x = 50;
-		int y = 100;
-		int height = 200;
-		int width = 200;
+		int x = 50, y= 100, height = 200, width = 200;
 		
 		for (int i = 0; i < word.length(); i++) {
 			label[i] = new JLabel();
@@ -125,7 +125,7 @@ public class Main extends JFrame {
 		int restart = JOptionPane.showOptionDialog(this, "Select an option:", null, JOptionPane.YES_NO_OPTION,
 				JOptionPane.INFORMATION_MESSAGE, null, Constants.RESTART_OPTIONS, -1);
 		if (restart == 0) {
-			this.dispose();
+			//this.dispose();
 			new Main();
 		} else {
 			System.exit(0);
