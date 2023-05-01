@@ -1,28 +1,26 @@
 package edu.cgs.HangMan;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JButton;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
-import java.awt.event.ActionEvent;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
 public class Main extends JFrame {
-
+	private static final long serialVersionUID = 9090539023962519750L;
 	private JPanel contentPane;
 	private String[] words = {"ΓΛΙΣΤΡΩ", "ΑΜΕΙΒΩ", "ΒΟΡΙΝΟΣ", "ΔΙΑΡΡΟΗ", "ΕΚΠΑΓΛΟΣ", "ΚΛΥΣΜΑ", "ΙΛΙΓΓΟΣ", "ΟΙΟΝΕΙ", "ΧΝΟΤΟ", "ΣΥΜΦΥΗΣ", "ΩΣΟΤΟΥ"};
 	private String word;
 	private JLabel[] label;
-	JComboBox comboBox;
-	JLabel HangMan;
-	private int x = 50, y = 100, height = 200, width = 200;
+	private JComboBox<String> comboBox;
+	private JLabel HangMan;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -125,8 +123,8 @@ public class Main extends JFrame {
 		int restart = JOptionPane.showOptionDialog(this, "Select an option:", null, JOptionPane.YES_NO_OPTION,
 				JOptionPane.INFORMATION_MESSAGE, null, Constants.RESTART_OPTIONS, -1);
 		if (restart == 0) {
-			//this.dispose();
-			new Main();
+			this.dispose();
+			new Main().setVisible(true);
 		} else {
 			System.exit(0);
 		}
