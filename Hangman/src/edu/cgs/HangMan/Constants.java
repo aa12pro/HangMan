@@ -14,5 +14,5 @@ public class Constants {
 	public static final ImageIcon Stage_6 = new ImageIcon(Main.class.getResource("/resources/Stage_6.png"));
 	public static final ImageIcon Stage_7 = new ImageIcon(Main.class.getResource("/resources/Stage_7.png"));
 	public static final ImageIcon Stage_8 = new ImageIcon(Main.class.getResource("/resources/Stage_8.png"));
-	public static String[] RESTART_OPTIONS = { "Restart", "Quit" };
+	public static final String[] RESTART_OPTIONS = { "Restart", "Quit" };
 }

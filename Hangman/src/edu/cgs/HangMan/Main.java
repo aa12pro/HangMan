@@ -2,6 +2,7 @@ package edu.cgs.HangMan;
 
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
@@ -17,7 +18,9 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JTextField;
 
+
 public class Main extends JFrame {
+	
 	private JPanel contentPane;
 	//Σύνολο των λέξεων
 	private String[] words = {"ΓΛΙΣΤΡΩ", "ΑΜΕΙΒΩ", "ΒΟΡΙΝΟΣ", "ΔΙΑΡΡΟΗ", "ΕΚΠΑΓΛΟΣ", "ΚΛΥΣΜΑ", "ΙΛΙΓΓΟΣ", "ΟΙΟΝΕΙ",
@@ -31,6 +34,9 @@ public class Main extends JFrame {
 	private JComboBox<String> letters;
 	//Εικόνες του κρεμασμένου
 	private JLabel HangedMan;
+	private JLabel[] label;
+	private JComboBox<String> comboBox;
+	private JLabel HangMan;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -127,7 +133,7 @@ public class Main extends JFrame {
 					} else if (HangedMan.getIcon().equals(Constants.Stage_7)) {
 						HangedMan.setIcon(Constants.Stage_8);
 					} else {
-						//Άμα τελιώσουν η φάσεις της εικόνας ο παίκτης χάνει
+						//Άμα τελιώσουν οι φάσεις της εικόνας ο παίκτης χάνει
 						JOptionPane.showMessageDialog(null, "You lost! Better Luck Next Time!");
 						restart();
 					}
