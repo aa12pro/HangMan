@@ -35,7 +35,6 @@ public class Main extends JFrame {
 	//Εικόνες του κρεμασμένου
 	private JLabel HangedMan;
 	private JLabel[] label;
-	private JComboBox<String> comboBox;
 	private JLabel HangMan;
 	
 	public static void main(String[] args) {
@@ -62,7 +61,7 @@ public class Main extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		letters = new JComboBox();
+		letters = new JComboBox<String>();
 		letters.setModel(new DefaultComboBoxModel(new String[] {"Α", "Β", "Γ", "Δ", "Ε", "Ζ", "Η", "Θ", "Ι", "Κ", "Λ", "Μ", "Ν", "Ξ", "Ο", "Π", "Ρ", "Σ", "Τ", "Υ", "Φ", "Χ", "Ψ", "Ω"}));
 		letters.setBounds(491, 51, 73, 34);
 		contentPane.add(letters);
